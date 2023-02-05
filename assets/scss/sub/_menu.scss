@@ -1,0 +1,699 @@
+.menu-title-wrap {
+	background-image: url('../images/sub/brand-bg.jpg');
+	background-size: cover;
+	.title {
+		text-align: center;
+		.tit {
+			font-size: rem(80);
+			color: $gray-2;
+			font-weight: 700;
+			font-family: $font-family-sub;
+			@include mdq-max(lg) {
+				font-size: rem(50);
+			}
+		}
+		.text {
+			font-size: rem(52);
+			font-weight: 300;
+			font-family: $font-family-sub;
+			color: $gray-2;
+			@include mdq-max(lg) {
+				font-size: rem(35);
+			}
+			.point {
+				font-weight: 700;
+				position: relative;
+				z-index: 1;
+				&::after {
+					content: '';
+					width: 100%;
+					height: 20px;
+					background-color: $color-1;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+		}
+	}
+}
+.menu-content {
+	.tab-header {
+		margin: 0;
+		.tab-item {
+			max-width: 50%;
+			padding: 0;
+			.link {
+				border: 0;
+				background-color: #f3f3f3;
+				font-size: rem(32);
+				color: $gray-6;
+				font-weight: 700;
+				font-family: $font-family-sub;
+				padding: 0;
+				min-height: 90px;
+				@include mdq-max(lg) {
+					font-size: rem(22);
+					min-height: 70px;
+				}
+				&.on {
+					color: $gray-1;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+// 매장 배달 포장 섹션
+.tab-content-list-wrap {
+	background-color: $color-1;
+	padding: em(30) 0;
+}
+.tab-menu-list {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	row-gap: em(20);
+	.box {
+		text-align: center;
+		flex: 1 1;
+		@include mdq-max(lg) {
+			flex: 1 1 33.33%;
+		}
+		@include mdq-max(md) {
+			flex: 1 1 50%;
+		}
+		.link {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&:hover {
+				.img-circle {
+					border: 2px solid $gray-1;
+				}
+			}
+			.img-circle {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				background-color: $white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include mdq-max(lg) {
+					width: 90px;
+					height: 90px;
+				}
+				.icon {
+					width: em(78);
+				}
+			}
+			.tit {
+				font-size: rem(24);
+				font-weight: 400;
+				font-family: $font-family-sub;
+				margin-top: em(5);
+				@include mdq-max(lg) {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+}
+.tip-wrap {
+	background-image: url('../images/sub/brand-bg.jpg');
+	background-size: cover;
+	.inner {
+		display: flex;
+		padding: 0 em(50);
+		padding-top: em(100);
+		@include mdq-max(lg) {
+			flex-direction: column;
+			padding: 0 em(10);
+			padding-top: em(50);
+			align-items: center;
+		}
+	}
+}
+.tip {
+	&-model {
+		@include mdq-max(lg) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: em(15);
+		@include mdq-max(lg) {
+			padding: em(50) 0;
+		}
+		.title {
+		}
+	}
+}
+.tip-sequence {
+	display: flex;
+	align-items: center;
+	column-gap: em(10);
+	row-gap: em(15);
+	@include mdq-max(lg) {
+		flex-direction: column;
+	}
+	.box {
+		width: 237px;
+		height: 237px;
+		border-radius: 50%;
+		background-color: $white;
+		border: 1px solid $gray-1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		row-gap: em(15);
+		@include mdq-max(xl) {
+			width: 180px;
+			height: 180px;
+			border-radius: 0;
+		}
+		@include mdq-max(lg) {
+			border-radius: 50%;
+		}
+		.number {
+			font-size: rem(40);
+			color: $color-1;
+			font-weight: 700;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: $color-1;
+			}
+			@include mdq-max(lg) {
+				font-size: rem(30);
+			}
+		}
+		.desc {
+			font-size: rem(24);
+			color: $gray-2;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			@include mdq-max(xl) {
+				font-size: rem(20);
+			}
+		}
+	}
+	.arrow {
+		@include mdq-max(lg) {
+			width: em(54);
+			transform: rotate(90deg);
+		}
+	}
+}
+
+// 등록된 제품 리스트
+.product-title {
+	text-align: center;
+	padding-bottom: em(30);
+	.tit {
+		font-size: rem(50);
+		font-weight: 700;
+		color: $gray-2;
+		font-weight: 700;
+		font-family: $font-family-sub;
+	}
+	.desc {
+		font-size: rem(26);
+		color: $gray-2;
+	}
+}
+.product-section {
+}
+.product-list {
+	padding: em(100) 0;
+	&:nth-child(2n-1) {
+		background: #f6f4f1;
+	}
+	&:nth-child(2n) {
+		background-image: url('../images/sub/brand-bg.jpg');
+		background-size: cover;
+	}
+
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		column-gap: 2.5%;
+		row-gap: em(50);
+		@include mdq-max(md) {
+			column-gap: 2%;
+		}
+		.box {
+			width: 23%;
+			@include mdq-max(md) {
+				width: 49%;
+			}
+			.link {
+				display: flex;
+				flex-direction: column;
+				&:hover {
+					.img-bx {
+						.food {
+							display: none;
+						}
+						.food-hover {
+							display: inline;
+						}
+					}
+				}
+				.img-bx {
+					overflow: hidden;
+					position: relative;
+					background-color: $white;
+					border: 1px solid $gray-d;
+					width: em(318);
+					height: em(318);
+					@include mdq-max(xxl) {
+						width: 100%;
+						height: em(200);
+					}
+					.food {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					.food-hover {
+						display: none;
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					.spicy-wrap {
+						position: absolute;
+						bottom: 15px;
+						left: 50%;
+						transform: translateX(-50%);
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						column-gap: em(10);
+						.spicy {
+						}
+					}
+				}
+				.txt-bx {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin-top: em(20);
+					.category {
+						font-size: rem(18);
+						color: #f0a400;
+						font-family: $font-family-sub;
+					}
+					.name {
+						font-size: rem(26);
+						color: $gray-2;
+						font-weight: 700;
+						font-family: $font-family-sub;
+					}
+					.desc {
+						font-size: rem(18);
+						color: $gray-6;
+						font-family: $font-family-sub;
+					}
+					.size-wrap {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						column-gap: em(10);
+						margin-top: em(15);
+						.size {
+							font-size: rem(10);
+							color: $white;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 24px;
+							height: 24px;
+							line-height: 24px;
+							background-color: $gray-2;
+							font-family: $font-family-sub;
+							border-radius: 50%;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+	}
+	.price-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: em(10);
+		.percent {
+			font-size: rem(18);
+			color: $red;
+			font-weight: 600;
+			font-family: $font-family-sub;
+		}
+		.price {
+			font-size: rem(34);
+			color: $gray-2;
+			font-weight: 700;
+			font-family: $font-family-sub;
+			@include mdq-max(lg) {
+				font-size: rem(28);
+			}
+		}
+	}
+}
+
+// 밀키트 배송
+.mealkit-banner {
+	background-image: url('../images/sub/brand-bg.jpg');
+	background-size: cover;
+	padding: em(50) 0;
+	img {
+		width: 100%;
+	}
+}
+.mealkit-product {
+	background: #f6f4f1 !important;
+	padding: em(100) 0;
+}
+
+// 메뉴 상세페이지
+.menu-view {
+	background-image: url('../images/sub/brand-bg.jpg');
+	background-size: cover;
+	padding: em(100) 0;
+	@include mdq-max(lg) {
+		padding: em(50) 0;
+	}
+	.container {
+		display: flex;
+		align-items: center;
+		// justify-content: space-between;
+		justify-content: center;
+		height: 100%;
+		@include mdq-max(lg) {
+			flex-wrap: wrap;
+			height: auto;
+			column-gap: em(10);
+		}
+	}
+	.item {
+		width: 100%;
+		.title {
+			text-align: center;
+			margin-top: em(35);
+			@include mdq-max(lg) {
+				margin-top: 0;
+			}
+			.tit {
+				font-size: rem(50);
+				font-weight: 700;
+				font-family: $font-family-sub;
+				color: $gray-1;
+			}
+			.desc {
+				font-size: rem(26);
+				color: $gray-1;
+			}
+		}
+		.content {
+			padding: em(30) 0;
+			@include mdq-max(lg) {
+				padding: em(15) 0;
+			}
+			.img-bx {
+				width: em(720);
+				// height: em(720);
+				height: fit-content;
+				margin: 0 auto;
+				@include mdq-max(lg) {
+					width: 100%;
+					height: auto;
+					@include img-to-bg(65%);
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+}
+.other-food {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: em(5);
+	padding: em(8) em(20);
+	border-radius: 30px;
+	border: 1px solid $gray-d;
+	background-color: $white;
+	color: $gray-6;
+	transition: 0.3s;
+	.name {
+		white-space: nowrap;
+	}
+	&:hover {
+		background-color: $color-1;
+		color: $gray-1;
+		border: 1px solid $color-1;
+	}
+	&:first-child {
+		@include mdq-max(lg) {
+			order: 2;
+		}
+	}
+	&:last-child {
+		@include mdq-max(lg) {
+			order: 3;
+		}
+	}
+}
+
+.menu-common-title {
+	font-size: rem(40);
+	font-weight: 700;
+	font-family: $font-family-sub;
+	color: $gray-2;
+	text-align: center;
+	padding-bottom: em(20);
+}
+.side-view {
+	background-color: #f6f4f1;
+	padding: em(100) 0;
+	@include mdq-max(lg) {
+		padding: em(50) 0;
+	}
+	.container {
+		max-width: 1240px;
+		position: relative;
+	}
+	.img-bx{
+		.food{
+			display: line;
+		}
+		.food-hover{
+			display: none;
+		}
+		&:hover{
+			.food{
+				display: none;
+			}
+			.food-hover{
+				display: inline;
+			}
+		}
+	}
+}
+.recommend-view {
+	background-image: url('../images/sub/brand-bg.jpg');
+	background-size: cover;
+	padding: em(100) 0;
+	position: relative;
+	@include mdq-max(lg) {
+		padding: em(50) 0 em(80) 0;
+	}
+	.container {
+		max-width: 1240px;
+		position: relative;
+	}
+	.img-bx{
+		.food{
+			display: line;
+		}
+		.food-hover{
+			display: none;
+		}
+		&:hover{
+			.food{
+				display: none;
+			}
+			.food-hover{
+				display: inline;
+			}
+		}
+	}
+}
+
+.menu-view-slide {
+	.item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.img-bx {
+			width: em(320);
+			height: em(320);
+			border: 1px solid $gray-d;
+			background-color: $white;
+			position: relative;
+			overflow: hidden;
+			@include mdq-max(lg) {
+				width: 100%;
+				height: auto;
+			}
+			&:hover {
+				img {
+					transform: scale(1.2);
+				}
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: 0.3s;
+			}
+		}
+		.txt-bx {
+			text-align: center;
+			padding-top: em(15);
+			.title {
+				font-size: rem(26);
+				color: $gray-2;
+				font-family: $font-family-sub;
+				font-weight: 600;
+				@include mdq-max(lg) {
+					font-size: rem(22);
+				}
+			}
+			.desc {
+				font-size: rem(18);
+				font-family: $font-family-sub;
+				color: $gray-6;
+			}
+			.category {
+				font-size: rem(18);
+				color: #f0a400;
+				font-family: $font-family-sub;
+			}
+		}
+	}
+	.swiper-container {
+		max-width: 1040px;
+	}
+	.swiper-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: rem(45);
+		z-index: 1;
+		@include mdq-max(lg) {
+			display: none;
+		}
+		&--prev {
+			left: 0;
+		}
+		&--next {
+			right: 0;
+		}
+	}
+	.spicy-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: em(5);
+		position: absolute;
+		bottom: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		.fire {
+		}
+	}
+	
+	.size-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: em(10);
+		margin-top: em(15);
+		.size {
+			font-size: rem(10);
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			background-color: $gray-2;
+			font-family: $font-family-sub;
+			border-radius: 50%;
+			font-weight: 700;
+		}
+	}
+}
+.view-component-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	transform: translateX(-50%);
+	.box {
+		padding: em(10);
+		border: 1px solid $gray-d;
+		background-color: $white;
+		border-right: 0;
+		&:last-child {
+			border-right: 1px solid $gray-d;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			column-gap: em(5);
+			font-size: rem(14);
+			color: $gray-1;
+		}
+	}
+}
+.img-bx-pop {
+	width: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

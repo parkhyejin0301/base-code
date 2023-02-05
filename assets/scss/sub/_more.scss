@@ -1,0 +1,69 @@
+.view-article {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: em(10) em(25);
+	font-size: rem(16);
+	background-color: $color-1;
+	width: fit-content;
+	color: $gray-3;
+	margin: 0 auto;
+	border-radius: 35px;
+	transition: 0.3s;
+	&:hover {
+		background-color: darken($color-1, 10%);
+		color: $white;
+	}
+}
+
+// 이벤트
+.event-tab {
+	display: flex;
+	border-bottom: 1px solid $gray-d;
+	.box {
+		.link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: em(10) em(30);
+			font-size: rem(20);
+			font-family: $font-family-sub;
+			border: 1px solid $gray-d;
+			border-bottom: 0;
+			border-right: 0;
+			font-weight: 700;
+			&.on,
+			&:hover {
+				background-color: $color-1;
+				color: $white;
+			}
+		}
+		&:last-child {
+			.link {
+				border-right: 1px solid $gray-d;
+			}
+		}
+	}
+}
+.event-read {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: em(10) em(15);
+	font-size: rem(20);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	@include mdq-max(lg) {
+		font-size: rem(15);
+	}
+	&.customer {
+		background-color: $color-1;
+		color: $gray-6;
+	}
+	&.boss {
+		background-color: $gray-8;
+		color: $white;
+	}
+}

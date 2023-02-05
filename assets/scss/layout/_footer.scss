@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.footer {
+	padding: rem(50) 0;
+	background: #333;
+	color: #eee;
+	font-size: rem(13);
+	font-weight: 100;
+
+	&__logo {
+		img {
+			width: em(140);
+		}
+	}
+
+	// 푸터 텍스트 구분선 스타일 샘플
+	&__txt {
+		position: relative;
+		overflow: hidden;
+		left: -0.5em;
+		.txt {
+			span {
+				position: relative;
+				display: inline-block;
+				padding: 0 0.5em;
+				&:before {
+					content: '';
+					left: -1px;
+					height: 0.8em;
+					top: 50%;
+					margin-top: -0.4em;
+					position: absolute;
+					border-left: 1px solid lighten(#999, 10%);
+				}
+			}
+		}
+	}
+
+	.created-masstige {
+		.masstige {
+			font-weight: 500;
+		}
+		&:hover {
+			color: #7d67ff;
+		}
+	}
+}

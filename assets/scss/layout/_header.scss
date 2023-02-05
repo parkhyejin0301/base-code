@@ -1,0 +1,69 @@
+@charset "UTF-8";
+$header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
+
+.header {
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	width: 100%;
+	z-index: 500;
+	@if ($header-fix == true) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		@at-root html {
+			scroll-padding-top: $nav-height + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
+		}
+	}
+	@include mdq-max(lg) {
+		@at-root html {
+			scroll-padding-top: $nav-height-lg + $container-gutter-width/2; //input required 브라우저 메시지 포커싱 위치를 맞춰줍니다.
+		}
+	}
+
+	.header-wrap {
+		height: $nav-height;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include mdq-max(lg) {
+			height: $nav-height-lg;
+		}
+		.logo {
+			flex: 0 0 auto;
+			img {
+				width: em(140);
+			}
+		}
+	}
+}
+
+.main-body,
+.sub-body {
+	@if ($header-fix == true) {
+		padding-top: $nav-height;
+		@include mdq-max(lg) {
+			padding-top: $nav-height-lg;
+		}
+	}
+}
+.main {
+	min-height: 65vh;
+}
+
+// 스크롤
+.main-body,
+.sub-body {
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+		width: 7px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $color-1;
+		border-radius: 7px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #eeeeee;
+		border-radius: 10px;
+	}
+}
